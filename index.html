@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин посуды "Elegance"</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="container nav">
+                <li>
+                    <a href="javascript:void(0)" onclick="window.location.reload()" class="logo">Elegance</a>
+                    <p class="slogan">Все, что необходимо для Вашего уютного стола</p>
+                </li>
+                <li>
+                    <a href="#shop-items">Каталог</a>
+                </li>
+                <li>
+                    <a href="#contacts">Контакты</a>
+                </li>
+                <li>
+                    <div class="site-search">
+                        <input type="search" id="search-input">
+                        <button type="button" id="search-btn" class="fa fa-search"></i>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    <div class="filters">
+      <div class="filters-sort">
+        <label for="sort">Сортировка:</label>
+        <select name="sort" id="sort">
+          <option selected value="alphabet">По алфавиту</option>
+          <option value="expensive">Сначала дорогие</option>
+          <option value="cheap">Сначала дешевые</option>
+          <option value="rating">Рейтинг</option>
+        </select>
+      </div>
+      <div class="filtration">
+        <select name="filter" id="filter">
+          <option selected>Материал:</option>
+          <option value="glass">Стекло</option>
+          <option value="crystal-glass">Хрусталь</option>
+          <option value="porcelain">Фарфор</option>
+          <option value="stainless-teel">Нержавеющая сталь</option>
+          <option value="faience">Фаянс</option>
+          <option value="ceramics">Керамика</option>
+        </select>
+      </div>
+    </div>
+    <section id="shop-items">
+    </section>
+    <p id="nothing-found"></p>
+  </main>
+  <footer id="contacts" class="container">
+    <a href="#" class="logo">Elegance</a>
+  </footer>
+  <template id="item-template">
+    <div class="shop-item">
+      <img src="">
+      <div class="content">
+        <div class="tags"></div>
+        <h1></h1>
+        <p></p>
+      </div>
+      <div class="footer">
+        <span class="price"></span>
+        <div class="rating"></div>
+      </div>
+    </div>
+    </div>
+  </template>
+  <script src="script.js"></script>
+</body>
+</html>

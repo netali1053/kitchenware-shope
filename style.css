@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto:wght@300;400;500;700;900&display=swap');
+:root {
+    --pink: #AC7088;
+    --gold: #96903c;
+    --yellow: #e7e5af;
+    --beige: #dfd4a7;
+    --white: #FFF;
+    --gray: rgb(118, 118, 118);
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.logo {
+    font-family: 'Cinzel';
+    font-size: 38px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.nav a,
+footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav a:hover,
+footer a:hover {
+    color: var(--dark)
+}
+
+.nav input:focus {
+    outline-color: var(--peach);
+    outline-style: solid;
+}
+
+.slogan {
+    font-family: "Caveat";
+    font-size: 20px;
+    margin: 0;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.site-search {
+    display: flex;
+}
+
+.site-search input {
+    border: 1px solid var(--gray);
+    border-radius: 4px 0 0 4px;
+}
+
+.site-search button {
+    background: var(--beige);
+    border: 1px solid var(--gray);
+    -webkit-text-stroke: 1px var(--beige);
+    border-radius: 0 4px 4px 0;
+    border-left: 0;
+}
+
+#shop-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.shop-item {
+    width: calc(25% - 17px);
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid;
+}
+
+.shop-item .content {
+    padding: 10px 10px 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+.shop-item img {
+    width: 100%;
+    height: 350px;
+    flex-shrink: 3;
+    object-fit: contain;
+}
+
+.shop-item h1 {
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.shop-item p {
+    margin-top: 0;
+}
+
+.shop-item .price {
+    background-color: var(--beige);
+    padding: 4px 8px;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin-top: auto;
+}
+
+.shop-item .footer {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shop-item .rating {
+    cursor: pointer;
+    color: var(--gold);
+}
+
+.shop-item .tags {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.shop-item .tag {
+    background: var(--yellow);
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+}
+
+#nothing-found {
+    color: var(--dark);
+    position: absolute;
+    white-space: nowrap;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 500;
+}
+
+.filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+#filter option:first-child {
+    display: none;
+}
