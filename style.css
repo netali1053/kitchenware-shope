@@ -183,10 +183,22 @@ footer {
 .filters {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: start;
     margin: 20px 0;
+}
+
+.filters-sort {
+    margin-right: 50px;
+}
+
+.filtration {
+    margin-right: 3px;
 }
 
 #filter option:first-child {
     display: none;
+}
+
+.btn {
+    cursor: pointer;
 }

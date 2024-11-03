@@ -24,7 +24,7 @@ const items = [{
     },
     {
         title: "Форма для запекания прямоугольная Appolia 22х36 см, зеленая",
-        description: "Материал: керамика, объем: 3800 мл",
+        description: "Материал: керамика, объем: 3800 мл.",
         tags: [],
         price: 277,
         img: "./img/4-picture.jpg",
@@ -32,7 +32,7 @@ const items = [{
     },
     {
         title: "Салатник Boston 17 см",
-        description: "Диаметр: 17, материал: хрусталь",
+        description: "Диаметр: 17, материал: хрусталь.",
         tags: [],
         price: 124,
         img: "./img/5-picture.jpg",
@@ -40,7 +40,7 @@ const items = [{
     },
     {
         title: "Кувшин Bossa Nova 1,19 л",
-        description: "Материал: хрусталь",
+        description: "Материал: хрусталь.",
         tags: [],
         price: 153,
         img: "./img/6-picture.jpg",
@@ -48,7 +48,7 @@ const items = [{
     },
     {
         title: "Кружка Versace Barocco Haze 300 мл, черная",
-        description: "Материал: фарфор",
+        description: "Материал: фарфор.",
         tags: ["Премиум", "Популярный"],
         price: 480,
         img: "./img/7-picture.jpg",
@@ -56,7 +56,7 @@ const items = [{
     },
     {
         title: "Блюдо «Вогнутый листок» 26х25х8,5 см",
-        description: "Материал: фаянс",
+        description: "Материал: фаянс.",
         tags: ["Популярный"],
         price: 235,
         img: "./img/8-picture.jpg",
@@ -64,7 +64,7 @@ const items = [{
     },
     {
         title: "Щипцы сервировочные «Ракушки» Marina 25 см",
-        description: "Материал: нержавеющая сталь",
+        description: "Материал: нержавеющая сталь.",
         tags: [],
         price: 173,
         img: "./img/9-picture.jpg",
@@ -72,7 +72,7 @@ const items = [{
     },
     {
         title: "Тарелка салатная Oro E Argento Oro 22 см",
-        description: "Материал: фарфор",
+        description: "Материал: фарфор.",
         tags: ["Новинка"],
         price: 106,
         img: "./img/10-picture.jpg",
@@ -80,7 +80,7 @@ const items = [{
     },
     {
         title: "Ваза Fast Cameo 30 см",
-        description: "Материал: фарфор",
+        description: "Материал: фарфор.",
         tags: [],
         price: 1430,
         img: "./img/11-picture.jpg",
@@ -88,7 +88,7 @@ const items = [{
     },
     {
         title: "Салатник Bicos Clear 22 см",
-        description: "Материал: стекло",
+        description: "Материал: стекло.",
         tags: [],
         price: 318,
         img: "./img/12-picture.jpg",
@@ -265,4 +265,14 @@ filterControl.addEventListener('change', (event) => {
     }
 
     getItems(currentState);
+});
+
+const reset = document.querySelector('.btn');
+
+reset.addEventListener('click', () => {
+    currentState = items;
+
+    getItems(currentState.sort((a, b) => sortByAlphabet(a, b)));
+
+    filterControl.selectedIndex = 0;
 });
